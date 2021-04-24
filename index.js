@@ -1,5 +1,5 @@
 const globals = {
-    roomId: 2,
+    roomId: 0,
     textId: 0,
     name: [],
     inventory: {},
@@ -16,13 +16,14 @@ const store = {
                 `Good job! After some more consideration you remember your middle name:`,
                 `Truly your powers of recollection are remarkable. Your last name then?`,
             ],
-            firstNames: ["sally", "john", "ted"],
-            middleNames: ["duke", "pearl"],
-            lastNames: ["foxglove"],
+            firstNames: ["Marla","Winifred","Albert","Ester","Fenric","Vanessa","Edith","Rene","Trilby","Sanjay","Mateo","Madeline","Stetson","Thing","Franz","Wensleydale","Petra","Marty","Emmett","Biff","Lyndon","Dick","Dolemite","Martok"],
+            middleNames: ["Duke", "Pearl"],
+            lastNames: ["Griggs","Head","Marzipan","Haberdasher","O'Hara","Stilton","StarRider","Mateo","Etoufee","Lamar","Gloop","Thing","Newstead","Hearst","Nidhogg","Goulash","Jambalaya","Power","Scriabin","Bartok"],
         },
         {
             heading: "The treachery of objects",
-            intro: "To get back in you'll have to enter a combination",
+            intro: "To get back in first you'll have to enter a combination on a keypad.",
+            desc: "What do you enter?",
             correct: "funny number",
             options: [
                 {
@@ -222,7 +223,9 @@ function room0Render(){
 function room1Render(){
     if (globals.roomData.picked === undefined){
         globals.roomData.picked = [];
+        addLine(store.rooms[1].intro);
     }
+    addLine(store.rooms[1].desc);
     let options = store.rooms[1].options.filter(option => !globals.roomData.picked.includes(option.number));
     options = options.map(option => {
         const {number, response, prompt} = option;
@@ -250,6 +253,7 @@ function room2Render(){
         roomData.view = "room";
         roomData.inventory = room.startingItems.slice();
         roomData.area = "";
+        roomData.consumed = [];
     }
     if (roomData.view == "inventory"){
         addLine("You have the following items:");
@@ -262,7 +266,7 @@ function room2Render(){
             //addLine(room.items.find(item => item.name === itemName).desc);
         });
         document.getElementById("content").appendChild(ul);
-        addButton("combine some items", () => {roomData.view = "combine"; render();})
+        if(roomData.inventory.length > 1)addButton("combine some items", () => {roomData.view = "combine"; render();})
         addButton("back", () => {roomData.view = "room"; render();})
     }
     else if (roomData.view == "combine"){
@@ -310,6 +314,7 @@ function room2Render(){
                     roomData.inventory = roomData.inventory.filter(item => !requires.includes(item));
                     // adds yieled inventory
                     roomData.inventory.push(...yields);
+                    roomData.consumed.push(...requires);
                 }
                 div.innerHTML = `<p>${response}</p>`;
             }
@@ -333,7 +338,7 @@ function room2Render(){
             const area = room.areas.find(area => area.name === roomData.area);
             addHeading(roomData.area);
             addLine(area.desc);
-            const gettables = area.items.filter(item => !roomData.inventory.includes(item));
+            const gettables = area.items.filter(item => !roomData.inventory.includes(item) && !roomData.consumed.includes(item));
             if (gettables.length > 0){
                 addLine("Were you so inclined you could pilfer the following:");
                 const options = gettables.map(get => {

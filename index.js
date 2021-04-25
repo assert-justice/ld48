@@ -1,5 +1,5 @@
 const globals = {
-    roomId: 2,
+    roomId: 0,
     textId: 0,
     name: [],
     inventory: {},

@@ -1,5 +1,5 @@
 const globals = {
-    roomId: 0,
+    roomId: 3,
     textId: 0,
     name: [],
     inventory: {},
@@ -347,10 +347,14 @@ const store = {
                     marketable character who is a wizard as well as a horse. They eye you with suspicion as their tail flicks with 
                     consternation.
                     <br><br>
-                    "Who goes there?" H.W. asks "You may only pass me if you speak the password.". They issue a conspiratorial whinney.`,
+                    "Who goes there?" H.W. asks "You may only pass me if you speak the password." They issue a conspiratorial whinney.`,
                     password: "password",
                     onPassword: `H.W. Neighs with approval <br><br>"You have pleased this Horse Wizard. Venture
                     forth to your ultimate fate and prepare to cut a rug."`,
+                    wrongPassword: [
+                        `W.H snorts in frustration "No no no! That's all wrong. But...I will allow you another guess."`,
+                        `W.H. thinks over your answer for a short while but discards it "Try again?"`
+                    ],
                     areas: [
                         {
                             name: "Horse Wizard",
@@ -880,17 +884,25 @@ function room3Render(){
                 addButton("sally forth", () => nextRoom());
                 return;
             }
+            else if(roomData.password !== ""){
+                let wid = Math.random() * cell.wrongPassword.length;
+                wid = Math.floor(wid);
+                addLine(cell.wrongPassword[wid]);
+            }
             const form = document.createElement("form");
             getContent().appendChild(form);
             const input = document.createElement("input");
+            const submit = document.createElement("input");
             form.appendChild(input);
+            form.appendChild(submit);
+            submit.type = "submit";
+            submit.value = "make guess"
             input.type = "text";
             input.onchange = (e) => {
                 roomData.password = e.target.value;
                 }
             form.onsubmit = (e) => {
                 e.preventDefault();
-                console.log(roomData.password);
                 render();
             }
         }

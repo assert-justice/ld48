@@ -185,7 +185,7 @@ const store = {
                 },
                 {
                     name: "defaced keycard",
-                    desc: "It's your keycard but an ugly mustache has been drawn on it."
+                    desc: "It's your keycard but an ugly mustache has been drawn on it. It's not going to work in this state!"
                 },
                 {
                     name: "filled cup",
@@ -225,10 +225,31 @@ const store = {
                 }
 
             ],
-            defaultResponses: [
-                "string 1",
-                "string 2",
-
+            defaultResponses:[
+            	"Like the ancient hominids smashing rocks together to discover fire, you slam the objects into each other over and over again in a futile attempt at creation. Every nerve in your body focuses intensely on this profound act of desperation. Eventually you relent, collapsing on the floor in a huddled and pathetic mass of exhaustion. The items have defeated you. Oh well, try something else?",
+            	"That doesn't seem to work.",
+            	"A valiant, even inspirational effort. Unfortunately it doesn't do anything",
+            	"Nothing happens.",
+            	"A great idea, aside from being incredibly wrong.",
+            	"You're joking, right?",
+            	"Nah, I don't think so.",
+            	"You could do that, but it would probably lead to a non-standard game over.",
+            	"I wouldn't recommend it!",
+            	"What a silly notion.",
+            	"It's just crazy enough to not work.",
+            	"That's contrived even for an adventure game.",
+            	"You ask the impossible.",
+            	"I'm sorry Dave, I can't do that.",
+            	"The inventory police will not allow it.",
+            	"Nope.",
+            	"No way.",
+            	"HAHAHAHAHAHAHA no.",
+            	"The Supreme Court has upheld your sincerly held religious belief that won't permit you to combine these items. Feel free to come back to this game and try again after you've successfully lobbied for court reform.",
+            	"That, uh, isn't a good idea.",
+            	"How amusingly incorrect of you!",
+            	"Are you even taking this seriously?",
+            	"Well that accomplished absolutely nothing. But hey, at least you're trying.",
+            	"That's not the worst idea you've had. It's still wrong though.",
             ],
             interactions: [              
                 {
@@ -270,6 +291,11 @@ const store = {
                 	requires:["frozen orange juice","lighter fluid"],
                 	response:"Prudently, rather than pour the lighter fluid directly onto the frozen orange juice, you instead opt to light the stove with it and slowly heat the OJ over the stove until it melts.",
                 	yields:["orange juice"]
+                },
+                {
+                	requires:["frozen orange juice","gummy cup"],
+                	response:"You struggle in vain to get the orange juice into the cup, but it doesn't work. Maybe try melting it first?",
+                	yields:[]
                 },
                 {
                     requires: ["cup with orange juice", "defaced keycard"],
@@ -502,9 +528,9 @@ const store = {
                 9: {
                     desc: `"Come now you know that's not true. Try again, what do we do here?"`,
                     options: {
-                        "Uh, ethical stuff?": 9,
                         "We make the plastic six pack rings that get caught on turtles?": 10,
                         "We make radioactive glow in the dark ping pong balls?": 10,
+                        "We synergize core compentencies and generate value for the shareholders": 11,
                         "To be totally honest I'm not really sure": 12,
                     }
                 },
@@ -618,7 +644,6 @@ function addOptions(options){
 }
 
 function room0Render(){
-    clearContent();
     const content = document.getElementById("content");
     const line = document.createElement("p");
     if (globals.textId === 3){
@@ -632,6 +657,7 @@ function room0Render(){
         return;
     }
     line.innerHTML = `${store.rooms[0].lines[globals.textId]}`;
+    content.appendChild(line);
     let options;
     if (globals.textId === 0){
         options = store.rooms[0].firstNames;
@@ -642,20 +668,16 @@ function room0Render(){
     else if (globals.textId === 2){
         options = store.rooms[0].lastNames;
     }
-    options = options.map(name => {
-        const li = document.createElement("li");
-        const button = document.createElement("button");
-        li.appendChild(button);
-        button.innerHTML = name;
-        button.addEventListener("click", e => {
-            globals.textId++;
-            globals.name.push(button.innerHTML);
-            render();
-        });
-        return li;
-    });
-    content.appendChild(line);
-    options.forEach(option => content.appendChild(option));
+    addOptions(options.map(name => {
+        return {
+            text: name,
+            func: () => {
+                globals.textId++;
+                globals.name.push(name);
+                render();
+            }
+        }
+    }))
 }
 
 function room1Render(){
@@ -763,6 +785,7 @@ function room2Render(){
                 }
                 div.innerHTML = `<p>${response}</p>`;
             }
+            addButton("try another combo", render);
         }, div);
         addButton("back", () => {roomData.view = "inventory"; render();})
     }

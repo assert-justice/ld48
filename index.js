@@ -521,7 +521,7 @@ const store = {
                     desc: `Now this is getting silly. How does this lava stay hot enough? This place's power bills must be through the roof. What are you going to do?`,
                     options: ["run","hurdle","hop","gambol","plummet","spring","skip", "shimmey", "waltz"],
                     correct: "waltz",
-                    correctText: "the powers of dance again come to your rescue.",
+                    correctText: "The power of dance again come to your rescue.",
                     wrongText: "That doesn't work. It does seem pretty impossible, maybe you should give up and get your thermos tomorrow?"
                 },
                 {
@@ -529,7 +529,7 @@ const store = {
                     desc: "In the room ahead stands a snake haired gorgon. You manage to look away just in time. If you aren't careful you'll turn to stone!",
                     options: ["charge","sprint","moonwalk", "barrel in","assail","bolt","scamper","scurry","gallop"],
                     correct: "moonwalk",
-                    correctText: "channeling the last of your remarkable dancing powers you sliiiiide right past the gorgon. Good job!",
+                    correctText: "Channeling the last of your remarkable dancing powers you sliiiiide right past the gorgon. Good job!",
                     wrongText: "As the next day arrives your coworkers wonder how a perfectly accurate statue of you ended up right in front of the lockers. Who can say"
                 }
             ]
@@ -1062,6 +1062,18 @@ function room5Render(){
 
 function fin(){
     addLine("Thanks for playing. Stay safe out there <3");
+    addLine("Written by Jonathan Gibson and Riley Miller with contributions from Jake Willis.");
+    addLine("Testing by Jay and Kenny");
+    addLine("Chapter Select:");
+    const rooms = store.rooms.filter(room => room.heading !== "Fin");
+    addOptions(rooms.map(
+        (room, idx) => {
+            return {
+                text: room.heading,
+                func: () => {globals.roomId = idx - 1; nextRoom();}
+            }
+        }
+    ))
 }
 
 function render(){

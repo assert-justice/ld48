@@ -24,22 +24,17 @@ const store = {
             heading: "Act 1: The Treachery of Objects",
             intro: "To get back in first you'll have to enter a combination on a keypad.",
             desc: "What do you enter?",
-            correct: "Kick it in frustration!",
+            correct: "[Kick it in frustration]",
             options: [
+            	{
+                	number:"1776",
+                	response:"That would be pretty trite, wouldn't it?",
+                	prompt: "Certainly"
+                },
                 {
                     number: "0451",
                     response: "NEEEEEEEEEEEEEERD",
                     prompt: "Fine"
-                },
-                {
-                    number: "A solution to Reimann zeta function with a real part NOT equal to one half.",
-                    response: "Very impressive. Unfortunately that's not the code for the keypad. Go collect your Millennium Prize",
-                    prompt: "Ok but not before I get my thermos"
-                },
-                {
-                	number:"12345",
-                	response:"This is a door, not your luggage.",
-                	prompt: "Oh, ok"
                 },
                 {
                 	number:"1066",
@@ -47,15 +42,50 @@ const store = {
                 	prompt: "Bollocks"
                 },
                 {
+                	number:"1941",
+                	response:"Ah, of course, the year Cheerios were invented. That's got to be it! ...Oh wait, never mind. That isn't right after all.",
+                	prompt: "How disappointing"
+                },
+                {
+                	number:"12345",
+                	response:"This is a door, not your luggage.",
+                	prompt: "Oh, ok"
+                },
+                {
+                	number:"1588",
+                	response:"On October 8, 1588, Spain declined. Unfortunately, this information won't help you open the door.",
+                	prompt: "Strange reference but ok"
+                },            	
+            	{
+            		number:"2525",
+            		response:"In the year 2525<br>If man is still alive.<br>If woman can survive, they may find.<br><br>In the year 3535<br>Ain't gonna need to tell the truth, tell no lies.<br>Everything you think, do and say, is in the pill you took today.<br><br>In the year 4545<br>Ain't gonna need your teeth, won't need your eyes.<br>You won't find a thing to chew.<br>Nobody's gonna look at you.<br><br>In the year 5555<br>Your arms hanging limp at your sides.<br>Your legs got nothing to do.<br>Some machine doing that for you.<br><br>In the year 6565<br>Ain't gonna need no husband, won't need no wife.<br>You'll pick your son, pick your daughter too.<br>From the bottom of a long glass tube. Whoa-oh<br><br>In the year 7510<br>If God's a-comin, he oughta make it by then.<br>Maybe he'll look around himself and say.<br>Guess it's time for the judgment day.<br><br>In the year 8510<br>God is gonna shake his mighty head.<br>He'll either say.I'm pleased where man has been.<br>Or tear it down and start again. Whoa-oh<br><br>In the year 9595<br>I'm kinda wonderin if man is gonna be alive.<br>He's taken everything this old Earth can give.<br>And he ain't put back nothing.Whoa-oh<br><br>Now it's been ten thousand years<br>Man has cried a billion tears.<br>For what he never knew,<br>now man's reign is through.<br><br>But through eternal night.<br>The twinkling of starlight.<br>So very far away.<br>Maybe it's only yesterday.<br><br>In the year 2525<br>If man is still alive.<br>If woman can survive, they may find.",
+            		prompt:"Great, there goes the music budget"
+            	},
+            	{
+            		number:"42",
+            		response:"NEEEEEEEEEEEEEERD",
+            		prompt:"Got me"
+            	},
+            	{
+                	number:"5040",
+                	response:"Highly composite of you! But also wrong, unfortunately.",
+                	prompt: "Sorry to be so divisive"
+                },
+                {
+                	number:"58008",
+                	response:"How childish. But you can't turn the whole door upside-down, and it doesn't have a screen anyway, so what are you even doing here?",
+                	prompt: "I don't know. I've never known. Why am I the way that I am?"
+                },
+                {
                 	number:"3.14159",
                 	response:"What? Look there isn't even a decimal point on this thing.",
                 	prompt: "That's dumb"
                 },
                 {
-                	number:"1776",
-                	response:"That would be pretty trite, wouldn't it?",
-                	prompt: "Certainly"
-                },
+                	number:"208173890789012",
+                	response:"Hey, how did you get my bank account number? Anyway, that doesn't seem to work.",
+                	prompt: "Darn"
+                }, 
                 {
                 	number:"Margaret Thatcher's birthday",
                 	response:"Gross!",
@@ -66,51 +96,12 @@ const store = {
                 	response:"Sure, that might be a likely combination if this were an evil corporation, but this is Ethical Corp™ we're talking about. They're not evil. Probably!",
                 	prompt: "Makes sense to me"
                 },
-                {
-                	number:"1588",
-                	response:"On October 8, 1588, Spain declined. Unfortunately, this information won't help you open the door.",
-                	prompt: "Strange reference but ok"
-                },
+                
                 {
                 	number:"2",
                 	response:"That's it? Just TWO? Sorry, I can't do just two.",
                 	prompt: "It was weird of me to try it"
-                },
-                {
-                	number:"208173890789012",
-                	response:"Hey, how did you get my bank account number? Anyway, that doesn't seem to work.",
-                	prompt: "Darn"
-                },
-                {
-                	number:"Aleph-nought",
-                	response:"You don't have time for that",
-                	prompt: "Ok"
-                },
-                {
-                	number:"5040",
-                	response:"Highly composite of you! But also wrong, unfortunately.",
-                	prompt: "Sorry to be so divisive"
-                },
-                {
-                	number:"TREE(3)",
-                	response:"What am I, a botanist?",
-                	prompt: "Yes. Yes you are a botanist. Let me take another stab at this door please?"
-                },
-                {
-                	number:"58008",
-                	response:"How childish. But you can't turn the whole door upside-down, and it doesn't have a screen anyway, so what are you even doing here?",
-                	prompt: "I don't know. I've never known. Why am I the way that I am?"
-                },
-                {
-                	number:"Avogadro's number?",
-                	response:"You can't remember it. High school chemistry class is truly a foreign country.",
-                	prompt:"Oh well"
-                },
-                {
-                	number:"1941",
-                	response:"Ah, of course, the year Cheerios were invented. That's got to be it! ...Oh wait, never mind. That isn't right after all.",
-                	prompt: "How disappointing"
-                },
+                },           
                 {
                 	number:"0112358132235",
                 	response:"The ghost of Leonardo Fibonacci (who haunts this compound for some reason) chortles with delight. Unfortunately, you are no closer to getting this door open.",
@@ -122,7 +113,32 @@ const store = {
                 	prompt: "Whatever"
                 },
                 {
-                    number: "Kick it in frustration!",
+            		number:"e^(i*pi)",
+            		response:"I hate to be the negative one but you've left me little choice. You're WRONG.",
+            		prompt:"Seems unlikely"
+            	},
+                {
+                	number:"TREE(3)",
+                	response:"What am I, a botanist?",
+                	prompt: "Yes. Yes you are a botanist. Let me take another stab at this door please?"
+                }, 
+                {
+                	number:"Aleph-nought",
+                	response:"You don't have time for that",
+                	prompt: "Ok"
+                },
+                {
+                	number:"Avogadro's number?",
+                	response:"You can't remember it. High school chemistry class is truly a foreign country.",
+                	prompt:"Oh well"
+                },
+                {
+                    number: "A solution to Reimann zeta function with a real part NOT equal to one half.",
+                    response: "Very impressive. Unfortunately that's not the code for the keypad. Go collect your Millennium Prize",
+                    prompt: "Ok but not before I get my thermos"
+                },
+                {
+                    number: "[Kick it in frustration]",
                     response: "Against all odds this works. The door to the office unlocks.",
                     prompt: "lemme in"
                 },
@@ -136,10 +152,10 @@ const store = {
             areas: [
                 {
                     name: "Cupboard",
-                    desc: "It's a cupboard; what do you want?",
-                    items: ["cracked cup","rubber chicken"],
+                    desc: "A cupboard housing untold wonders, perhaps. Or else just dishes and stuff, who knows?",
+                    items: ["cracked cup","camping stove"],
                     locked: ["bobby pin"],
-                    lockedMessage: "The cupboard is firmly locked. maybe you can find a key?",
+                    lockedMessage: "The cupboard is firmly locked. Maybe you can find a key?",
                     unlockedMessage: "With the bobby pin you manage to defeat the lock!",
                     lockedPrompt: "unlock with bobby pin",
                     unlockingConsumes: true,
@@ -147,21 +163,22 @@ const store = {
                 {
                     name: "Stove",
                     desc: "An old grimy stove. Sometimes it has trouble lighting.",
-                    items: ["lighter fluid"]
+                    items: ["lighter fluid","rubber chicken"]
                 },
                 {
                     name: "Key reader",
                     desc: "An ancient and intimidating key reader.",
-                    items: ["gross gum", "bobby pin"],
+                    items: ["gross gum"],
                 },
                 {
                     name: "Freezer",
-                    desc: "Months of neglect have left it a frigid morass of various abandoned food items.",
+                    desc: "Months of neglect have left it a frigid morass of various abandoned food items, with little recognizable absent further forensics.<br>As you stare into the frosty abyss, you recollect that in the end we become nothing, eradicated by time and freezer burn.",
                     items: ["frozen orange juice","car keys"]
                 },
             ],
             startingItems: [
-                "defaced keycard"
+                "defaced keycard",
+                "ballpoint pen"
                 ],
             unlockItem: "pristine keycard",
             unlockMessage: "Swipe the keycard and move on",
@@ -169,15 +186,19 @@ const store = {
             items: [
                 {
                     name: "cracked cup",
-                    desc: "It's a cup. With a crack in it. Basically, a cracked cup. This thing isn't going to hold anything unless you find a way to seal the crack."
+                    desc: "It's a cup. With a crack in it. Essentially, a cracked cup.<br>This thing isn't going to hold anything unless you find a way to seal the crack."
+                },
+                {
+                	name:"ballpoint pen",
+                	desc:"Out of ink, but if your employee evaluation next month goes well, you may be rewarded with a shiny new one."
                 },
                 {
                 	name:"frozen orange juice",
-                	desc:"'Now with twice the acid content!' the label promises helpfully."
+                	desc:"'Now with twice the acid content!', the label assures helpfully."
                 },
                 {
                 	name:"car keys",
-                	desc:"These aren't your car keys. You probably won't have any use for them."
+                	desc:"They aren't yours, so you probably won't have any use for them."
                 },
                 {
                     name: "lighter fluid",
@@ -188,16 +209,12 @@ const store = {
                     desc: "It's your keycard but an ugly mustache has been drawn on it. It's not going to work in this state!"
                 },
                 {
-                    name: "filled cup",
-                    desc: "A cup filled with lighter fluid."
-                },
-                {
                     name: "pristine keycard",
                     desc: "Cleaned up and ready to go!"
                 },
                 {
                     name: "gross gum",
-                    desc: "Pried off the keycard reader. Why did you take this again?"
+                    desc: "Pried off the keycard reader. Supple, but alluringly impermeable.<br>Why did you take this again?"
                 },
                 {
                 	name:"gummy cup",
@@ -213,23 +230,29 @@ const store = {
                 },
                 {
                 	name:"cup with lighter fluid",
-                	desc:"A cup of lighter fluid. How delightful.",
+                	desc:"A cup of lighter fluid. Maybe you could use it as a solvent?"
                 },
                 {
                 	name:"rubber chicken",
-                	desc:"It used to have a pulley in it, but someone tore it off.",
+                	desc:"It used to have a pulley in it, but someone tore it off. Sounds like something tiny is rattling around inside."
                 },
                 {
                     name: "bobby pin",
-                    desc: "Who uses these anymore?",
+                    desc: "The key to luscious locks, or antiquated adornment. Who even uses these anymore?"
+                },
+                {
+                	name:"camping stove",
+                	desc:"No one could seem to figure out how to use the built-in stove, so eventually management sprung for a portable one.<br>You hardly even noticed the deduction from your paycheck."
                 }
 
             ],
             defaultResponses:[
-            	"Like the ancient hominids smashing rocks together to discover fire, you slam the objects into each other over and over again in a futile attempt at creation. Every nerve in your body focuses intensely on this profound act of desperation. Eventually you relent, collapsing on the floor in a huddled and pathetic mass of exhaustion. The items have defeated you. Oh well, try something else?",
+            	"Like the ancient hominids smashing rocks together to discover fire, you slam the objects into each other over and over again in a futile attempt at creation.<br>Every nerve in your body focuses intensely on this profound act of desperation. Eventually you relent, collapsing on the floor in a pathetic huddled mass of exhaustion.<br>The items have defeated you. Oh well, try something else?",
             	"That doesn't seem to work.",
+            	"Is that even legal in this state?",
             	"A valiant, even inspirational effort. Unfortunately it doesn't do anything",
             	"Nothing happens.",
+            	"You've gained nothing except for knowledge. Well done.",
             	"A great idea, aside from being incredibly wrong.",
             	"You're joking, right?",
             	"Nah, I don't think so.",
@@ -242,65 +265,98 @@ const store = {
             	"I'm sorry Dave, I can't do that.",
             	"The inventory police will not allow it.",
             	"Nope.",
+            	"Look, if you're into that I'm not going to judge, but do it on your own time.",
             	"No way.",
             	"HAHAHAHAHAHAHA no.",
-            	"The Supreme Court has upheld your sincerly held religious belief that won't permit you to combine these items. Feel free to come back to this game and try again after you've successfully lobbied for court reform.",
+            	"The Supreme Court has upheld your sincerly-held religious belief, which won't permit you to combine these items.<br>Feel free to come back to this game and try again after you've successfully lobbied for court reform.",
             	"That, uh, isn't a good idea.",
             	"How amusingly incorrect of you!",
             	"Are you even taking this seriously?",
             	"Well that accomplished absolutely nothing. But hey, at least you're trying.",
             	"That's not the worst idea you've had. It's still wrong though.",
+            	"I question your approach to this problem."
             ],
             interactions: [              
                 {
-                    requires: ["cracked cup", "defaced keycard"],
-                    response: "You put the keycard in the cup but nothing happens. Shame.",
-                    yields: ["cracked cup", "defaced keycard"]
+                	requires:["rubber chicken","car keys"],
+                	response:"Wielding the curiously sharp car keys with great depth of focus, as if venting some esoteric childhood frustration, you ferociously tear the rubber chicken to shreds.<br>Inside you find a shiny bobby pin for some reason.",
+                	yields:["bobby pin"]
                 },
                 {
-                    requires: ["cracked cup", "orange juice"],
-                    response: "You put some orange juice in the cup but it just drains out through the crack and pools safety-hazardly on the floor. You still have plenty left though.",
-                    yields: ["cracked cup", "orange juice"]
+                	requires:["rubber chicken","ballpoint pen"],
+                	response:"Brandishing the now-defunct writing implement as if it were a less mighty tool of some sort, you ravenously imbue the rubber chicken with a multitude of lacerations.<br>Inside you find a shiny bobby pin for some reason.",
+                	yields:["bobby pin"]
                 },
                 {
-                    requires: ["gummy cup", "defaced keycard"],
-                    response: "You put the keycard in the gummy cup but still nothing happens. What a let down!",
-                    yields: []
-                },
-                {
-                    requires: ["cracked cup", "lighter fluid"],
-                    response: "You put some lighter fluid in the cup but it just drains out through the crack and pools safety-hazardly on the floor. You still have plenty left though.",
-                    yields: ["cracked cup", "lighter fluid"]
-                },
-                {
-                    requires: ["gummy cup", "lighter fluid"],
-                    response: "You put the lighter fluid in the cup. Yay?",
-                    yields: ["cup with lighter fluid", "lighter fluid"]
-                },
-                {
-                    requires: ["cup with lighter fluid", "defaced keycard"],
-                    response: "Hmm, the lighter fluid doesn't seem to do anything. Looks like you'll need something stronger... <br> (You dump out the lighter fluid)",
-                    yields: ["gummy cup", "lighter fluid","defaced keycard"]
-                },
-                {
-                    requires: ["gummy cup", "orange juice"],
-                    response: "You fill the cup to the brim with nutritious, highly caustic orange juice.",
-                    yields: ["cup with orange juice"]
-                },
-                {
-                	requires:["frozen orange juice","lighter fluid"],
-                	response:"Prudently, rather than pour the lighter fluid directly onto the frozen orange juice, you instead opt to light the stove with it and slowly heat the OJ over the stove until it melts.",
-                	yields:["orange juice"]
-                },
-                {
-                	requires:["frozen orange juice","gummy cup"],
-                	response:"You struggle in vain to get the orange juice into the cup, but it doesn't work. Maybe try melting it first?",
+                	requires:["car keys","defaced keycard"],
+                	response:"Trying to fix a key with another key? I guess that makes a certain sense. Though of course, it's terribly incorrect.",
                 	yields:[]
                 },
                 {
-                    requires: ["cup with orange juice", "defaced keycard"],
-                    response: "You put the keycard in the cup, cleaning off the silly facial hair. Finally!",
-                    yields: ["pristine keycard"]
+                    requires:["cracked cup", "defaced keycard"],
+                    response:"You put the keycard in the cup but nothing happens. Shame.",
+                    yields:["cracked cup", "defaced keycard"]
+                },
+                {
+                    requires:["cracked cup", "orange juice"],
+                    response:"You put some orange juice in the cup but it just drains out through the crack and pools safety-hazardly on the floor.<br>You still have plenty left though.",
+                    yields:["cracked cup", "orange juice"]
+                },
+                {
+                    requires:["gummy cup", "defaced keycard"],
+                    response:"You put the keycard in the gummy cup but still nothing happens. What a let down!",
+                    yields:[]
+                },
+                {
+                    requires:["cracked cup", "lighter fluid"],
+                    response:"You pour the lighter fluid in the cup and it immediately drains through the crack and pools safety-hazardly on the floor.<br>Hopefully you didn't need the lighter fluid!.",
+                    yields:["cracked cup"]
+                },
+                {
+                	requires:["defaced keycard","ballpoint pen"],
+                	response:"The pen is out of ink. Besides, you're trying remove the mustache, not embellish it.",
+                	yields:[]
+
+                },
+                {
+                	requires:["camping stove","lighter fluid"],
+                	response:"No need. It's got one of those self-contained fuel thingies.",
+                	yields:[]
+                },
+                {
+                	requires:["camping stove","frozen orange juice"],
+                	response:"You slowly heat the orange juice over the gently invigorating flame of the camping stove. Miraculously, you manage to melt the OJ without damaging the container or yourself.<br>Of course you do, you're a fucking professional.",
+                	yields:["orange juice"]
+                },
+                {
+                    requires:["gummy cup", "lighter fluid"],
+                    response:"You put the lighter fluid in the cup. Yay?",
+                    yields:["cup with lighter fluid"]
+                },
+                {
+                    requires:["cup with lighter fluid", "defaced keycard"],
+                    response:"Hmm, the lighter fluid doesn't seem to do anything. Looks like you'll need something stronger... <br> (You dump out the lighter fluid)",
+                    yields:["gummy cup", "lighter fluid","defaced keycard"]
+                },
+                {
+                    requires:["gummy cup", "orange juice"],
+                    response:"You fill the cup to the brim with nutritious, highly caustic orange juice.",
+                    yields:["cup with orange juice"]
+                },
+                {
+                	requires:["frozen orange juice","lighter fluid"],
+                	response:"What, are you just going to pour the lighter fluid directly onto orange juice? Then what? Use a stove or something!",
+                	yields:[]
+                },
+                {
+                	requires:["frozen orange juice","gummy cup"],
+                	response:"You attempt to shove the frozen orange juice into the cup, but without success. Maybe this would work better if it wasn't frozen?",
+                	yields:[]
+                },
+                {
+                    requires:["cup with orange juice", "defaced keycard"],
+                    response:"You put the keycard in the cup, cleaning off the silly facial hair. Finally!",
+                    yields:["pristine keycard"]
                 },
                 {
                 	requires:["gross gum","cracked cup"],
@@ -308,9 +364,9 @@ const store = {
                 	yields:["gummy cup"]
                 },
                 {
-                    requires: [],
-                    response: "I couldn't be arsed to write a funny response for this one. Suffice it to say, nothing happens.",
-                    yields: []
+                    requires:[],
+                    response:"I couldn't be arsed to write a funny response for this one. Suffice it to say, nothing happens.",
+                    yields:[]
                 }
             ]
         },
@@ -327,13 +383,13 @@ const store = {
                         {
                             name: "Art",
                             desc: "You consider the art. The art moves you. You have a quiet moment.",
-                            back: "finish your contemplation",
+                            back: "Finish your contemplation",
                         },
                         {
                             name: "Placards",
                             desc: `Here reside the present and former employees of the month. 
                             One day you may join their hallowed ranks. Your coworker H.W. has won for the last eight months solid.`,
-                            back: "suck ups"
+                            back: "Suck ups"
                         }
                     ],
                     doors: {
@@ -347,10 +403,11 @@ const store = {
                     marketable character who is a wizard as well as a horse. They eye you with suspicion as their tail flicks with 
                     consternation.
                     <br><br>
-                    "Who goes there?" H.W. asks "You may only pass me if you speak the password." They issue a conspiratorial whinney.`,
-                    password: "password",
+                    "Who goes there?" H.W. asks "You may only pass me if you speak the password. But: I am a magnanimous horse wizard. I will give 
+                    you a hint: What word is three letters long and can be both an animal and an operating system?" They issue a conspiratorial whinney.`,
+                    password: "gnu",
                     onPassword: `H.W. Neighs with approval <br><br>"You have pleased this Horse Wizard. Venture
-                    forth to your ultimate fate and prepare to cut a rug."`,
+                    forth to your ultimate fate and prepare to cut a rug." You hear the distinct sound of newsprint rustling behind him.`,
                     wrongPassword: [
                         `W.H snorts in frustration "No no no! That's all wrong. But...I will allow you another guess."`,
                         `W.H. thinks over your answer for a short while but discards it "Try again?"`
@@ -359,7 +416,7 @@ const store = {
                         {
                             name: "Horse Wizard",
                             desc: "Horse Wizard is pretty interesting alright. Even if you had a sugar cube or something they are incorruptable.",
-                            back: "phooey"
+                            back: "Phooey"
                         }
                     ],
                     doors: {
@@ -372,14 +429,41 @@ const store = {
                     areas: [],
                     doors: {
                         right: "Hallway",
+                        up: "Deb's cubicle",
+                        down: "your cubicle",
+                    }
+                },
+                {
+                    name: "Deb's cubicle",
+                    desc: "Deborah's desk is pretty cluttered. You see pictures of her kids and an assortment of novelty coffee cups. Her computer displays the 'pipes' screensaver like it's 1998.",
+                    areas: [
+                        {
+                            name: "Photos",
+                            desc: "You have a moment to think about the nature of family and how work alienates us from our loved ones.",
+                            back: "Let's not",
+                        },
+                        {
+                            name: "Coffee cups",
+                            desc: "Many thrift shops and antique stores have been pillaged for the bounty you see here. There are mugs depicting cats, color changing mugs, rough clay mugs (possibly made by her kids). You wonder if she uses them all.",
+                            back: "Mysteries abound"
+                        },
+                        {
+                            name: "Computer",
+                            desc: "It seems Deb left her computer running. She's playing some game and is stuck on an obnoxious inventory puzzle.",
+                            back: "Oof. Good luck with that."
+                        }
+
+                    ],
+                    doors: {
                         up: "Jane's cubicle",
-                        down: "your cubicle"
+                        down: "Harry's cubicle",
+                        
                     }
                 },
                 {
                     name:"Jane's cubicle",
                     desc: `Jane keeps a tidy cubicle with hardly any environmental storytelling to speak of. She does have one of
-                    those dipping bird things though.`,
+                    those dipping bird things though. A neatly folded newspaper is just next to her keyboard.`,
                     areas:[
                         {
                             name: "Dipping bird thing",
@@ -387,10 +471,10 @@ const store = {
                             back: "Probably magic",
                         },
                         {
-                            name: "Sticky notes",
+                            name: "Newspaper",
                             desc: `You snoop through Jane's personal space in a way only acceptible in video games.
-                            You find a scribbled note saying the password is 'password'. `,
-                            back: "thanks Jane"
+                            Sure enough you find GNU scribbled in the crossword.`,
+                            back: "Thanks Jane"
                         }
                     ],
                     doors: {
@@ -405,12 +489,12 @@ const store = {
                         {
                             name: "Stress ball",
                             desc: "One of these days it's going to pop.",
-                            back: "better get back to it"
+                            back: "Better get back to it"
                         },
                         {
                             name: "Red fish",
                             desc: "Your thermos isn't here! Where it should be there is kind of a red fish. ",
-                            back: "maybe Chekhov's gun is around here somewhere"
+                            back: "Maybe Chekhov's gun is around here somewhere..."
                         }
                     ],
                     doors: {
@@ -427,15 +511,15 @@ const store = {
                     desc: `Arrayed before you is a shifting grid of lasers. You're not quite sure how you haven't noticed this before.
                     A plaque beside the door proudly annouces "This security system was designed by Madeline Coatsworth Depardu, dance teacher turned security expert".
                     It's an odd thing to put on a laser grid.<br><br>You're going to have to get through this somehow.`,
-                    options: ["roll", "duck", "slide", "foxtrot", "dash"],
+                    options: ["roll", "duck", "dodge","slide","leap","jump", "foxtrot", "dash","vault"],
                     correct: "foxtrot",
                     correctText: "You skillfully sashay through the lasers like a bamf.",
-                    wrongText: "Despite your best efforts your lack of alacrity betrays you. If this was a Sierra game you would have to restart the whole thing but I'm aren't that mean. Try again."
+                    wrongText: "Despite your best efforts your lack of alacrity betrays you. If this was a Sierra game you would have to restart the whole thing but we aren't that mean. Try again."
                 },
                 {
                     name: "The Lava Pit",
                     desc: `Now this is getting silly. How does this lava stay hot enough? This place's power bills must be through the roof. What are you going to do?`,
-                    options: ["skip", "shimmey", "waltz"],
+                    options: ["run","hurdle","hop","gambol","plummet","spring","skip", "shimmey", "waltz"],
                     correct: "waltz",
                     correctText: "the powers of dance again come to your rescue.",
                     wrongText: "That doesn't work. It does seem pretty impossible, maybe you should give up and get your thermos tomorrow?"
@@ -443,7 +527,7 @@ const store = {
                 {
                     name: "The Gorgon",
                     desc: "In the room ahead stands a snake haired gorgon. You manage to look away just in time. If you aren't careful you'll turn to stone!",
-                    options: ["moonwalk", "barrel in"],
+                    options: ["charge","sprint","moonwalk", "barrel in","assail","bolt","scamper","scurry","gallop"],
                     correct: "moonwalk",
                     correctText: "channeling the last of your remarkable dancing powers you sliiiiide right past the gorgon. Good job!",
                     wrongText: "As the next day arrives your coworkers wonder how a perfectly accurate statue of you ended up right in front of the lockers. Who can say"
@@ -737,6 +821,7 @@ function room2Render(){
         addButton("back", () => {roomData.view = "room"; render();})
     }
     else if (roomData.view == "combine"){
+        addLine("Pick two items to combine");
         roomData.combos = [];
         const div = document.createElement("div");
         getContent().appendChild(div);
@@ -754,6 +839,36 @@ function room2Render(){
                 else{
                     roomData.combos.push(item);
                 }
+                if(roomData.combos.length === 2){
+                    let match = null;
+                    for (let inter of room.interactions){
+                        if (inter.requires.length === 0){
+                            match = inter;
+                            let rid = Math.random() * room.defaultResponses.length;
+                            rid = Math.floor(rid);
+                            match.response = room.defaultResponses[rid];
+                            continue;
+                        }
+                        else if (inter.requires.length !== roomData.combos.length){continue;}
+                        let broke = false;
+                        for (let item of inter.requires){
+                            if (!roomData.combos.includes(item)){broke = true; break;}
+                        }
+                        if (!broke){match = inter; break;}
+                    }
+                    if (match){
+                        const {requires, response, yields} = match;
+                        if (yields.length > 0){
+                            // remove consumed inventory
+                            roomData.inventory = roomData.inventory.filter(item => !requires.includes(item));
+                            // adds yieled inventory
+                            roomData.inventory.push(...yields);
+                            roomData.consumed.push(...requires);
+                        }
+                        div.innerHTML = `<p>${response}</p>`;
+                    }
+                    addButton("try another combo", render, div);
+                }
             });
             const label = document.createElement("label");
             form.appendChild(label);
@@ -761,37 +876,7 @@ function room2Render(){
             label.innerText = item;
             form.appendChild(document.createElement("br"));
         });
-        addButton("combine!", () => {
-            let match = null;
-            for (let inter of room.interactions){
-                if (inter.requires.length === 0){
-                    match = inter;
-                    let rid = Math.random() * room.defaultResponses.length;
-                    rid = Math.floor(rid);
-                    match.response = room.defaultResponses[rid];
-                    continue;
-                }
-                else if (inter.requires.length !== roomData.combos.length){continue;}
-                let broke = false;
-                for (let item of inter.requires){
-                    if (!roomData.combos.includes(item)){broke = true; break;}
-                }
-                if (!broke){match = inter; break;}
-            }
-            if (match){
-                const {requires, response, yields} = match;
-                if (yields.length > 0){
-                    // remove consumed inventory
-                    roomData.inventory = roomData.inventory.filter(item => !requires.includes(item));
-                    // adds yieled inventory
-                    roomData.inventory.push(...yields);
-                    roomData.consumed.push(...requires);
-                }
-                div.innerHTML = `<p>${response}</p>`;
-            }
-            addButton("try another combo", render);
-        }, div);
-        addButton("back", () => {roomData.view = "inventory"; render();})
+        addButton("back", () => {roomData.view = "room"; render();})
     }
     else{
         addButton("look at inventory", () => {roomData.view = "inventory"; render();})
@@ -879,7 +964,7 @@ function room3Render(){
         addHeading(cell.name);
         addLine(cell.desc);
         if(cell.password){
-            if (cell.password === roomData.password){
+            if (cell.password === roomData.password.toLowerCase()){
                 addLine(cell.onPassword);
                 addButton("sally forth", () => nextRoom());
                 return;

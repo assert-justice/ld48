@@ -973,6 +973,7 @@ function room3Render(){
                 let wid = Math.random() * cell.wrongPassword.length;
                 wid = Math.floor(wid);
                 addLine(cell.wrongPassword[wid]);
+                addLine("Maybe you should look around for clues...");
             }
             const form = document.createElement("form");
             getContent().appendChild(form);
